@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Evaluación diagnóstica de Introducción al Desarrollo Front End con HTML, CSS y JavaScript" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Constanza Jara" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Revista online de memes</title>
+    </head>
+    <body>
+      <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: black;
+                color: black;
+                font-family: 'Oswald', sans-serif;
+                font-weight:200;
+            }
+            div {
+                padding: 2rem;
+            }
+            h1{
+              font-size: calc(0.15rem + 2vw);
+              font-weight:500;
+              padding: 0 0 1,5rem 0;
+              color: black;
+              line-height: 1;
+            }
+            h2{
+              font-size: calc(3rem + 7vw);
+              font-weight: 700;
+              padding: 0 0 1,5rem 0;
+              color: yellow;
+              line-height: 1;
+            }
+            h3{
+              font-size: calc(1rem + 3vw);
+              font-weight: 700;
+              padding: 0 0 1,5rem 0;
+              color: green;
+              line-height: 1;
+            }
+
+            p {
+                padding: 1rem 0;
+            }
+            @media (min-width: 800px) {
+                p {
+                    max-width: 60%;
+                }
+            }
+        </style>
+        <div>
+        <h1><span id="uno"><a href="index.html">PORTADA 31 MARZO</a>
+          <h2> REVISTA ONLINE DE MEMES<h2>
+               <h3><span id="saludo"></span> CIBERNAUTAS <span id="nombre"></span></h1>
+        </div>
+        <div id="otro"><strong><a href="page_1.html">01</a></strong> / <a href="page_2.html">02</a> / <a href="page_3.html">03</a></div>
+        <script>
+        var opciones = ["Holi.", "Buenas buenaaas.", "Que pasa.", "Bendiciones."];
+ function setup() {
+     createCanvas(windowWidth - 40, windowHeight - 40)
+         .position(20, 20)
+         .style("z-index", -1);
+     document.getElementById("saludo").textContent += random(opciones);
+ }
+      function draw() {
+        background(0,0,0);
+        fill(0,0,0)
+        noStroke();
+        textSize(100);
+        text("🤠",mouseX,mouseY);
+        fill(100)
+        ellipse(mouseX+69,mouseY+50, 100,10)
+      }
+      function windowResized() {
+    resizeCanvas(windowWidth - 40, windowHeight - 40);
+}
+        </script>
+        <style>
+        p1{
+          font-size: calc(0.25rem + 1vw);
+          font-weight: 300;
+          padding: 0 0 1,5rem 0;
+          color: white;
+          line-height: 1;
+        }
+        </style>
+        <div>
+          <p1> Aqui podras actualiazarte de lo que ha pasado ultimamente en internet y podras encontrar una actividad interactiva en la pagina 2<p1>
+          </div>
+    </body>
+</html>
